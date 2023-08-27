@@ -36,7 +36,6 @@
         },
         "ADMINS": {
             "description": "1614118733 850340266 1872074304 6294375605",
-            ###enigma chew kaif leaf
             "required": true
         },
         "PICS": {
@@ -45,7 +44,6 @@
         },
         "LOG_CHANNEL": {
             "description": "-1001929451652",
-            ###Filter Bot Logs
             "required": true
         },
         "AUTH_USERS": {
