@@ -38,7 +38,7 @@ async def fil_mod(client, message):
       except: 
          return await message.reply("**𝙸𝙽𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴 𝙲𝙾𝙼𝙼𝙰𝙽𝙳...**")
       
-      m = await message.reply("**𝚂𝙴𝚃𝚃𝙸𝙽𝙶.../**")
+      m = await message.reply("**𝚂𝙴𝚃𝚃𝙸𝙽𝙶...**")
 
       if args in mode_on:
           FILTER_MODE[str(message.chat.id)] = "True" 
@@ -48,7 +48,7 @@ async def fil_mod(client, message):
           FILTER_MODE[str(message.chat.id)] = "False"
           await m.edit("**𝙰𝚄𝚃𝙾𝙵𝙸𝙻𝚃𝙴𝚁 𝙳𝙸𝚂𝙰𝙱𝙻𝙴𝙳**")
       else:
-          await m.edit("USE :- /autofilter on 𝙾𝚁 /autofilter off")
+          await m.edit("USE  `/autofilter on` 𝙾𝚁 `/autofilter off` ")
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
 async def give_filter(client, message):
@@ -140,12 +140,12 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("😁 𝗛𝗲𝘆 𝗙𝗿𝗶𝗲𝗻𝗱,𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗲𝗮𝗿𝗰𝗵 𝗬𝗼𝘂𝗿𝘀𝗲𝗹𝗳.", show_alert=True)
+        return await query.answer("Search on your own", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("𝐋𝐢𝐧𝐤 𝐄𝐱𝐩𝐢𝐫𝐞𝐝 𝐊𝐢𝐧𝐝𝐥𝐲 𝐏𝐥𝐞𝐚𝐬𝐞 𝐒𝐞𝐚𝐫𝐜𝐡 𝐀𝐠𝐚𝐢𝐧 🙂.", show_alert=True)
+        return await query.answer("Link expired, search again", show_alert=True)
     movie = movies[(int(movie_))]
     await query.answer('𝙲𝙷𝙴𝙲𝙺𝙸𝙽𝙶 𝙵𝙸𝙻𝙴 𝙾𝙽 𝙼𝚈 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴...//')
     k = await manual_filters(bot, query.message, text=movie)
@@ -155,7 +155,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('𝚃𝙷𝙸𝚂 𝙼𝙾𝚅𝙸𝙴 I𝚂 𝙽𝙾𝚃 𝚈𝙴𝚃 𝚁𝙴𝙻𝙴𝙰𝚂𝙴𝙳 𝙾𝚁 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝙳𝙰𝚃𝚂𝙱𝙰𝚂𝙴 💌')
+            k = await query.message.edit('𝚃𝙷𝙸𝚂 SEARCH I𝚂 𝙽𝙾𝚃 𝚈𝙴𝚃 𝚁𝙴𝙻𝙴𝙰𝚂𝙴𝙳 𝙾𝚁 𝙰𝙳𝙳𝙴𝙳 𝚃𝙾 𝙳𝙰𝚃𝚂𝙱𝙰𝚂𝙴 💌')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -190,7 +190,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             title = query.message.chat.title
 
         else:
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('Piracy Is Crime XD')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -215,7 +215,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("Buddy Don't Touch Others Property 😁", show_alert=True)
+                await query.answer("Buddy don't touch others property 😁", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -244,7 +244,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Piracy is a Crime XD')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -393,7 +393,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart Okay 😒", show_alert=True)
+            await query.answer("We know you are smart, but we are a step ahead", show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -426,7 +426,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
-            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://youtube.com/@GreyMattersYT'),
+            InlineKeyboardButton('⚡ SUBSCᏒIBΞ ⚡', url='https://teleram.dog/asiandramacomplex'),
             InlineKeyboardButton('🤖 UᎮDΛTΞS 🤖', url='{script.HOME_BUTTONURL_UPDATES}')
         ], [
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
@@ -760,7 +760,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("I couldn't find anything with that name. Remove extra words")
         await asyncio.sleep(8)
         await k.delete()
         return
