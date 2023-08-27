@@ -22,7 +22,7 @@ async def save_group(bot, message):
         if message.chat.id in temp.BANNED_CHATS:
             # Inspired from a boat of a banana tree
             buttons = [[
-                InlineKeyboardButton('🌐 Support', url=f'https://t.me/search_zone_support')
+                InlineKeyboardButton('🌐 Support', url=f'https://t.me/ensemblygroup2')
             ]]
             reply_markup=InlineKeyboardMarkup(buttons)
             k = await message.reply(
@@ -38,7 +38,7 @@ async def save_group(bot, message):
             return
         buttons = [[
             InlineKeyboardButton('ℹ️ 𝙷𝚎𝚕𝚙', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('📢 Updates', url='https://t.me/OTT_Updated')
+            InlineKeyboardButton('📢 Updates', url='https://t.me/ensemblymovie')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -55,8 +55,8 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply_video(
                 video="https://telegra.ph/file/03691465baa774e46506d.mp4",                                               
-                                                 caption=f'<b>ʜᴇʏ, {u.mention} 👋🏻\nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ ɢʀᴏᴜᴘ {message.chat.title}\n\nʏᴏᴜ ᴄᴀɴ ꜰɪɴᴅ ᴍᴏᴠɪᴇꜱ / ꜱᴇʀɪᴇꜱ / ᴀɴɪᴍᴇꜱ ᴇᴛᴄ. ꜰʀᴏᴍ ʜᴇʀᴇ. ᴇɴᴊᴏʏ😉.\n\n<b>┏≫ ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ ʀᴜʟᴇs</b>\n┣ <b>ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ›› @greymatter_bots</b></code>\n<b>┗≫ ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ ʀᴜʟᴇs</b>',
-                                                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️ɢʀᴏᴜᴘ ʀᴜʟᴇs⬅️', url='http://t.me/MissRose_bot?start=rules_-1001820559841') ] ] )
+                                                 caption=f'<b>ʜᴇʏ, {u.mention} 👋🏻\nᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴏᴜʀ ɢʀᴏᴜᴘ {message.chat.title}\n\nʏᴏᴜ ᴄᴀɴ ᴇɴᴊᴏʏ😉.\n\n<b>┏≫ ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ ʀᴜʟᴇs</b>\n┣ <b>ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ›› @ensemblynetwork</b></code>\n<b>┗≫ ғᴏʟʟᴏᴡ ɢʀᴏᴜᴘ ʀᴜʟᴇs</b>',
+                                                 reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('➡️ɢʀᴏᴜᴘ ʀᴜʟᴇs⬅️', url='https://graph.org/Rules-09-03-2') ] ] )
                 )
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
@@ -70,7 +70,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('🌐 Support', url=f'https://t.me/search_zone_support')
+            InlineKeyboardButton('🌐 Support', url=f'https://t.me/ensemblygroup2')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -109,7 +109,7 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('🌐 Support', url=f'https://t.me/search_zone_support')
+            InlineKeyboardButton('🌐 Support', url=f'https://t.me/ensemblygroup2')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
@@ -191,7 +191,7 @@ async def ban_a_user(bot, message):
     try:
         k = await bot.get_users(chat)
     except PeerIdInvalid:
-        return await message.reply("This is an invalid user, make sure ia have met him before.")
+        return await message.reply("This is an invalid user, make sure I have met him before.")
     except IndexError:
         return await message.reply("This might be a channel, make sure its a user.")
     except Exception as e:
@@ -216,7 +216,7 @@ async def unban_a_user(bot, message):
         chat = message.text.split(None, 2)[1]
     else:
         chat = message.command[1]
-        reason = "No reason Provided"
+        reason = "No reason provided"
     try:
         chat = int(chat)
     except:
@@ -224,9 +224,9 @@ async def unban_a_user(bot, message):
     try:
         k = await bot.get_users(chat)
     except PeerIdInvalid:
-        return await message.reply("This is an invalid user, make sure ia have met him before.")
+        return await message.reply("This is an invalid user, make sure I have met him before.")
     except IndexError:
-        return await message.reply("Thismight be a channel, make sure its a user.")
+        return await message.reply("This might be a channel, make sure its a user.")
     except Exception as e:
         return await message.reply(f'Error - {e}')
     else:
