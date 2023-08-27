@@ -1,5 +1,5 @@
 {
-    "name": "Bot",
+    "name": "EvaMariaBot",
     "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
     "stack": "container",
     "keywords": [
@@ -15,19 +15,19 @@
       "index",
       "inline"
     ],
-    "website": "https://telegram.dog/ensemblynetwork",
-    "repository": "https://telegram.dog/ensemblynetwork",
+    "website": "https://github.com/8769ANURAG/EvaMaria",
+    "repository": "https://github.com/8769ANURAG/EvaMaria",
     "env": {
         "BOT_TOKEN": {
-            "description": "5937272366:AAE7i0iLPK3h6EBM20_3a2odr1u4O63xBaI",
+            "description": "Your bot token.",
             "required": true
         },
         "API_ID": {
-            "description": "20145897",
+            "description": "Get this value from https://my.telegram.org or @USERS_RO_BOT",
             "required": true
         },
         "API_HASH": {
-            "description": "c8c611e7ce0bb467f198aa1b348a4735",
+            "description": "Get this value from https://my.telegram.org or @USERS_RO_BOT",
             "required": true
         },
         "CHANNELS": {
@@ -35,7 +35,7 @@
             "required": false
         },
         "ADMINS": {
-            "description": "1614118733 850340266 1872074304 6294375605",
+            "description": "Username or ID of Admin. Separate multiple Admins by space.",
             "required": true
         },
         "PICS": {
@@ -43,7 +43,7 @@
             "required": false
         },
         "LOG_CHANNEL": {
-            "description": "-1001929451652",
+            "description": "Bot Logs,Give a channel id with -100xxxxxxx",
             "required": true
         },
         "AUTH_USERS": {
@@ -51,7 +51,7 @@
             "required": false
         },
         "AUTH_CHANNEL": {
-            "description": "-1001172729530",
+            "description": "ID of channel.Make sure bot is admin in this channel. Without subscribing this channel users cannot use bot.",
             "required": false
         },
         "DATABASE_URI": {
