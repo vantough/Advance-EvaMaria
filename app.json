@@ -15,19 +15,19 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/8769ANURAG/EvaMaria",
-    "repository": "https://github.com/8769ANURAG/EvaMaria",
+    "website": "https://telegram.dog/ensemblynetwork",
+    "repository": "https://telegram.dog/ensemblynetwork",
     "env": {
         "BOT_TOKEN": {
-            "description": "Your bot token.",
+            "description": "5937272366:AAE7i0iLPK3h6EBM20_3a2odr1u4O63xBaI",
             "required": true
         },
         "API_ID": {
-            "description": "Get this value from https://my.telegram.org or @USERS_RO_BOT",
+            "description": "20145897",
             "required": true
         },
         "API_HASH": {
-            "description": "Get this value from https://my.telegram.org or @USERS_RO_BOT",
+            "description": "c8c611e7ce0bb467f198aa1b348a4735",
             "required": true
         },
         "CHANNELS": {
@@ -35,7 +35,8 @@
             "required": false
         },
         "ADMINS": {
-            "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "description": "1614118733 850340266 1872074304 6294375605",
+            ###enigma chew kaif leaf
             "required": true
         },
         "PICS": {
@@ -43,7 +44,8 @@
             "required": false
         },
         "LOG_CHANNEL": {
-            "description": "Bot Logs,Give a channel id with -100xxxxxxx",
+            "description": "-1001929451652",
+            ###Filter Bot Logs
             "required": true
         },
         "AUTH_USERS": {
@@ -51,7 +53,7 @@
             "required": false
         },
         "AUTH_CHANNEL": {
-            "description": "ID of channel.Make sure bot is admin in this channel. Without subscribing this channel users cannot use bot.",
+            "description": "-1001172729530",
             "required": false
         },
         "DATABASE_URI": {
