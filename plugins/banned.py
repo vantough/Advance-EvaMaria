@@ -21,12 +21,12 @@ disabled_group=filters.create(disabled_chat)
 @Client.on_message(filters.private & banned_user & filters.incoming)
 async def ban_reply(bot, message):
     ban = await db.get_ban_status(message.from_user.id)
-    await message.reply(f'Sorry Dude, You are Banned to use Me. \nBan Reason: {ban["ban_reason"]}')
+    await message.reply(f'Sorry Dude, You are Banned to use me. \nBan Reason: {ban["ban_reason"]}')
 
 @Client.on_message(filters.group & disabled_group & filters.incoming)
 async def grp_bd(bot, message):
     buttons = [[
-        InlineKeyboardButton('𝚂𝚞𝚙𝚙𝚘𝚛𝚝', url=f'https://t.me/greymatters_bots_discussion')
+        InlineKeyboardButton('𝚂𝚞𝚙𝚙𝚘𝚛𝚝', url=f'https://t.me/ensemblygroup2')
     ]]
     reply_markup=InlineKeyboardMarkup(buttons)
     vazha = await db.get_chat(message.chat.id)
